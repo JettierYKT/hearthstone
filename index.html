@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="background-image: url(bg.jpg);background-size: 100%">
+	<div class="enemy" style="text-align: center;height: 250px">
+		<h1 style="color: white">Enemy</h1>
+	</div>
+	<div class="player" style="text-align: center;height: 300px">
+		<h1 style="color: white">Player</h1>
+	</div>
+<script type="text/javascript">
+
+	let array = ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png",]
+	let enemy_block = document.querySelector(".enemy")
+	let player_block = document.querySelector(".player")
+	let randomImage = function(){
+		let rand = Math.random()*9
+		let round = Math.round(rand)
+		return round
+	}
+	let Random = function(){
+		let rand = Math.random()*5
+		let round = Math.round(rand)
+		return round
+	}
+	let createEnemyCards = function(arg){
+		for (let index = 0;index<arg;index = index + 1) {
+			let elem = document.createElement("img")
+			enemy_block.appendChild(elem)
+			elem.style.height = "200px";
+			elem.src = array[randomImage()];
+		}
+	}
+	let createPlayerCards = function(arg){
+		for (let index = 0;index<arg;index = index + 1) {
+			let elemen = document.createElement("img")
+			player_block.appendChild(elemen)
+			elemen.style.height = "200px";
+			elemen.src = array[randomImage()];
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
